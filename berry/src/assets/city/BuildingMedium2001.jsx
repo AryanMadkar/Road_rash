@@ -5,9 +5,10 @@ Command: npx gltfjsx@6.5.3 D:\buster\car\Mangos\public\data\Exports\gltf\Buildin
 
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
+import gltfUrl from './Building_Medium_2_001.gltf?url'
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('/Building_Medium_2_001.gltf')
+  const { nodes, materials } = useGLTF(gltfUrl)
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Plane002.geometry} material={materials.MI_InteriorFloor} />
@@ -26,4 +27,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/Building_Medium_2_001.gltf')
+useGLTF.preload(gltfUrl)

@@ -3,7 +3,7 @@ import BuildingMedium from "./BuildingMedium";
 import BuildingLarge from "./BuildingLarge";
 
 export default function Building({ lot }) {
-    const { position, size } = lot;
+    const { position, size, rotation = [0, 0, 0] } = lot;
 
     const [width] = size;
 
@@ -11,6 +11,7 @@ export default function Building({ lot }) {
         return (
             <BuildingSmall
                 position={position}
+                rotation={rotation}
             />
         );
     }
@@ -19,6 +20,7 @@ export default function Building({ lot }) {
         return (
             <BuildingMedium
                 position={position}
+                rotation={rotation}
             />
         );
     }
@@ -26,6 +28,7 @@ export default function Building({ lot }) {
     return (
         <BuildingLarge
             position={position}
+            rotation={rotation}
         />
     );
 }
