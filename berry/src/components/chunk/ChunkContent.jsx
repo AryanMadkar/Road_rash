@@ -1,6 +1,6 @@
 import Road from "../road/Road";
-import Lot from "../buildings/Lot";
 import { generateLots } from "../../utils/lotGenerator";
+import CityObjects from './../city/CityObject';
 export default function ChunkContent({
     data,
 }) {
@@ -11,13 +11,7 @@ export default function ChunkContent({
                 type={data.road.type}
                 direction={data.road.direction}
             />
-            {lots.map((lot) => (
-                <Lot
-                    key={lot.id}
-                    position={lot.position}
-                    size={lot.size}
-                />
-            ))}
+            <CityObjects lots={lots} />
         </>
     );
 }

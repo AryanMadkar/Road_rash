@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.5.3 D:\buster\car\Mangos\public\data\Exports\gltf\Buildin
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/Building_Large_2.gltf')
   return (
     <group {...props} dispose={null}>
